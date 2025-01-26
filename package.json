@@ -1,0 +1,29 @@
+{
+  "name": "virelium",
+  "version": "1.0.0",
+  "description": "Virelium, build on top of Ethereum.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "start": "node server.js",
+    "build": "rm -rf build && truffle compile --all",
+    "ganache": "ganache --host 127.0.0.1 --port 7545 --networkId 1337",
+    "migrate": "truffle migrate --reset --network development",
+    "console": "truffle console --network development",
+    "testnet": "truffle migrate --network ropsten",
+    "mainnet": "truffle migrate --network mainnet"
+  },
+  "author": "Virelium Org.",
+  "license": "MIT",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.15",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "ganache": "^7.9.2",
+    "truffle": "^5.11.5"
+  }
+}
