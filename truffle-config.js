@@ -15,9 +15,9 @@ module.exports = {
       //   from: <address>,
       //   websocket: true
     },
-    ropsten: {
-      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`),
-      network_id: "3",
+    sepolia: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`),
+      network_id: "11155111",
       gas: 5500000,
       gasPrice: 10000000000,
       confirmations: 2,
@@ -25,7 +25,7 @@ module.exports = {
       skipDryRun: true,
     },
     mainnet: {
-      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`),
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`),
       network_id: "1",
       gas: 6000000,
       gasPrice: 20000000000,
